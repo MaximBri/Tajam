@@ -1,0 +1,65 @@
+.person {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  align-items: center;
+
+  height: 100%;
+
+  transition: all 0.3s;
+  &:hover {
+    transform: translateY(rem(-15));
+    scale: 1.05;
+  }
+  &__photo {
+    width: 100%;
+    height: rem(230);
+    background-color: $text-primary;
+  }
+  &__info {
+    width: 100%;
+    border-right: 1px solid rgba(250, 250, 250, 0.5);
+    border-bottom: 1px solid rgba(250, 250, 250, 0.5);
+    border-left: 1px solid rgba(250, 250, 250, 0.5);
+    &-name {
+      margin: rem(19) 0 rem(6);
+
+      font-size: rem(14);
+      font-weight: 700;
+      color: $text-light-four;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    &-job {
+      margin-bottom: rem(22);
+
+      font-size: rem(13);
+      font-weight: 300;
+      color: $text-light-four;
+      text-align: center;
+      text-transform: uppercase;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .person {
+    min-width: rem(220);
+    &__photo {
+      height: rem(180);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .person {
+    &:hover {
+      transform: translateY(0);
+      scale: 1;
+    }
+    &__photo {
+      height: rem(140);
+    }
+  }
+}

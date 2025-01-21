@@ -1,0 +1,115 @@
+.burger {
+  display: none;
+  width: rem(35);
+  height: rem(30);
+
+  &__bg {
+    &-close {
+      position: fixed;
+      z-index: 100;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+  }
+  &__menu {
+    position: fixed;
+    z-index: 300;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    transform: translateX(100%);
+
+    display: none;
+    display: flex;
+    flex-direction: column;
+
+    transition: all 0.5s;
+    &-close {
+      position: absolute;
+      top: 0;
+      right: 50%;
+      transform: translate(50%, -50%);
+    }
+    &--open {
+      transform: translateX(0);
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .burger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    box-sizing: content-box;
+    padding: rem(10);
+
+    background-color: transparent;
+    background-color: $burger-menu;
+    border: 1px solid $text-black;
+    border-radius: 10px;
+    & > div {
+      width: 100%;
+      height: rem(3);
+      background-color: $text-black;
+    }
+    &__menu {
+      display: flex;
+      flex-direction: column;
+      width: rem(200);
+      background-color: $burger-menu-list;
+      &-close {
+        position: absolute;
+        top: rem(30);
+        right: 50%;
+
+        width: 40px;
+        height: 40px;
+
+        background-color: transparent;
+        border: 2px solid $text-primary;
+        border-radius: 50%;
+        & > div {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+
+          width: 30px;
+          height: 4px;
+
+          background-color: $button-close;
+        }
+
+        :first-child {
+          transform: translate(-50%, -50%) rotate(45deg);
+        }
+
+        :last-child {
+          transform: translate(-50%, -50%) rotate(135deg);
+        }
+      }
+      &-list {
+        display: flex;
+        flex-direction: column;
+        gap: rem(25);
+        padding: rem(80) rem(30) 0;
+
+        & > a {
+          font-size: rem(20);
+          color: $text-primary;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .burger {
+    width: rem(25);
+    height: rem(20);
+  }
+}

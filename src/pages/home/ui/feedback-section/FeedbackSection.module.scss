@@ -1,0 +1,115 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+  padding: rem(62) rem(30) rem(72);
+  &__title {
+    margin-bottom: rem(31);
+
+    font-family: $second-family;
+    font-size: rem(22);
+    font-weight: 700;
+    color: $text-secondary;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: rem(24);
+    align-items: center;
+
+    width: 100%;
+    max-width: 80vw;
+    max-width: rem(460);
+  }
+  &__textarea {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    height: rem(200);
+    > textarea {
+      resize: none;
+
+      flex-grow: 1;
+
+      width: 100%;
+      padding: rem(12) rem(19);
+
+      font-size: rem(14);
+      font-weight: 300;
+      line-height: 1.6;
+      color: $text-black;
+      letter-spacing: 0.05em;
+
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      &::placeholder {
+        color: $text-secondary;
+      }
+    }
+  }
+  &__button {
+    width: rem(118);
+    margin-top: rem(-8);
+  }
+  &__error {
+    width: 100%;
+    margin-top: rem(-25);
+    padding: rem(10);
+
+    color: $text-primary;
+
+    background-color: $button-close;
+    border-radius: 0 0 10px 10px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .form {
+    padding: rem(50) rem(30);
+    &__title {
+      margin-bottom: rem(25);
+      font-size: rem(20);
+    }
+    &__wrapper {
+      gap: rem(20);
+    }
+    &__textarea {
+      height: rem(160);
+    }
+    &__error {
+      margin-top: rem(-20);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .form {
+    padding: rem(40) rem(20);
+    &__title {
+      margin-bottom: rem(20);
+      font-size: rem(18);
+    }
+    &__wrapper {
+      gap: rem(20);
+      max-width: 80vw;
+    }
+    &__textarea {
+      height: rem(160);
+      > textarea {
+        padding: rem(10) rem(15);
+      }
+    }
+    &__button {
+      width: rem(90);
+    }
+    &__error {
+      padding: rem(10);
+    }
+  }
+}

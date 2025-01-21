@@ -1,0 +1,28 @@
+.input {
+  width: 100%;
+  padding: rem(11) rem(19);
+
+  font-family: $font-family;
+  font-size: rem(14);
+  font-weight: 300;
+  line-height: 1.6;
+  color: $text-black;
+  letter-spacing: 0.05em;
+
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  &::placeholder {
+    color: #413d4b;
+  }
+  &-wrapper {
+    width: 100%;
+  }
+  &__error {
+    width: 100%;
+    padding: rem(10);
+
+    color: $text-primary;
+
+    background-color: $button-close;
+    border-radius: 0 0 10px 10px;
+  }
+}

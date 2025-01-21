@@ -1,0 +1,73 @@
+.story {
+  overflow-x: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: rem(197) 0 rem(190);
+
+  background-image: url('/images/story/background-for-video.png');
+  @include background;
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: rem(37);
+    align-items: center;
+    justify-content: center;
+
+    background-color: transparent;
+  }
+  &__image {
+    width: rem(97);
+    border-radius: 50%;
+    transition: transform .3s;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  &__title {
+    font-size: rem(16);
+    font-weight: 900;
+    line-height: 1.8;
+    color: $text-primary;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+}
+
+@media (max-width: 1024px) {
+  .story {
+    padding: rem(150) 0 rem(140);
+    background-size: auto 100%;
+    &__body {
+      gap: rem(30);
+    }
+    &__image {
+      width: rem(70);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .story {
+    padding: rem(120) 0;
+    &__image {
+      &:hover {
+        transform: scale(1);
+      }
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  .story {
+    padding: rem(80) 0;
+    &__body {
+      gap: rem(20);
+    }
+    &__image {
+      width: rem(50);
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.work {
+  position: relative;
+
+  overflow-y: hidden;
+  flex-grow: 1;
+
+  min-width: rem(266);
+  height: rem(200);
+  & > img {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+
+    width: 100%;
+  }
+}

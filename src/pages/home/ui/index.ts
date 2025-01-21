@@ -1,0 +1,9 @@
+export { MainSection } from './main-section/MainSection';
+export { MainSectionWrapper } from './main-section-wrapper/MainSectionWrapper';
+export { AboutSection } from './about-section/AboutSection';
+export { StorySection } from './story-section/StorySection';
+export { ExpertiseSection } from './expertise-section/ExpertiseSection';
+export { TeamSection } from './team-section/TeamSection';
+export { WorksSection } from './works-section/WorksSection';
+export { ReviewsSection } from './reviews-section/ReviewsSection';
+export { FeedbackSection } from './feedback-section/FeedbackSection';
