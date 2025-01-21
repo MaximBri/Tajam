@@ -76,7 +76,9 @@
     gap: rem(20);
     padding: rem(30) 0;
     &__image {
+      width: rem(160);
       height: rem(120);
+      margin: 0 auto;
     }
   }
 }
