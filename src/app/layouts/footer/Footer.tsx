@@ -1,18 +1,20 @@
 import { Link } from 'react-router-dom';
 
+import { FooterForm } from './ui/FooterForm';
+import { linksLinks } from './model/linksList';
+import { routes } from '../routes/routes';
+
 import logo from '/images/main/Logo.svg';
 import sotSvg from '/images/footer/dot.svg';
 import telSvg from '/images/footer/tel.svg';
 import styles from './Footer.module.scss';
-import { FooterForm } from './ui/FooterForm';
-import { linksLinks } from './model/linksList';
 
 export const Footer = () => {
   return (
     <footer className={styles.footer}>
       <div className={styles.footer__top}>
         <div className={styles.footer__col1}>
-          <Link className={styles.footer__logo} to="/">
+          <Link className={styles.footer__logo} to={routes.home}>
             <img src={logo} alt="logo" />
           </Link>
           <p className={styles['footer__col1-text']}>
@@ -47,7 +49,7 @@ export const Footer = () => {
                   key={index}
                 >
                   <img
-                    src={`/images/footer/${link.name}.svg`}
+                    src={`${import.meta.env.BASE_URL}/images/footer/${link.name}.svg`}
                     alt="social network"
                   ></img>
                 </Link>
@@ -62,7 +64,9 @@ export const Footer = () => {
           <Link to="#">TERMS & CONDITION</Link>
           <Link to="#">Privacy</Link>
         </div>
-        <span className={styles['footer__bottom-copyright']}>Copyright © 2015 - Tajem Creative</span>
+        <span className={styles['footer__bottom-copyright']}>
+          Copyright © 2015 - Tajem Creative
+        </span>
       </nav>
     </footer>
   );

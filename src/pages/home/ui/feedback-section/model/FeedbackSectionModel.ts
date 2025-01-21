@@ -54,7 +54,6 @@ export const feedbackSectionModel = () => {
       formattedValue += `-${value.slice(9, 11)}`;
     }
     setTel(formattedValue);
-    console.log(tel.length);
   };
 
   const checkValidEmail = (text: string) => {

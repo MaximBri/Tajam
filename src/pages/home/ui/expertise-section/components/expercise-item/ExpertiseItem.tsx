@@ -12,7 +12,7 @@ export const ExpertiseItem: FC<expertListInterface> = ({
     <li className={styles.expertise__item}>
       <img
         className={styles['expertise__item-image']}
-        src={`/images/expertise/${image_path}`}
+        src={`${import.meta.env.BASE_URL}/images/expertise/${image_path}`}
       ></img>
       <h3 className={styles['expertise__item-title']}>{title}</h3>
       <h4 className={styles['expertise__item-subtitle']}>{subtitle}</h4>

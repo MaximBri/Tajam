@@ -1,17 +1,17 @@
 .work {
   position: relative;
 
-  overflow-y: hidden;
+  overflow: hidden;
   flex-grow: 1;
 
   min-width: rem(266);
   height: rem(200);
-  & > img {
+  &__image {
     position: absolute;
     top: 50%;
     right: 50%;
     transform: translate(50%, -50%);
 
-    width: 100%;
+    width: 101%;
   }
 }

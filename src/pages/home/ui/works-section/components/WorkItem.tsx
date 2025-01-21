@@ -7,7 +7,7 @@ export const WorkItem: FC<{ path: string }> = ({ path }) => {
     <li className={styles.work}>
       <img
         className={styles.work__image}
-        src={`/images/works/Rectangle ${path}.png`}
+        src={`${import.meta.env.BASE_URL}/images/works/Rectangle ${path}.png`}
         alt="work"
       ></img>
     </li>
