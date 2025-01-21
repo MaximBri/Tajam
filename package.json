@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://maximbri.github.io/Tajam/",
   "scripts": {
     "dev": "vite & steiger ./src --watch",
     "lint": "eslint \"src/**/*.{ts,tsx}\"",
