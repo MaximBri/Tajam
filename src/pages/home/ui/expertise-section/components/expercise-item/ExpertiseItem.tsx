@@ -11,6 +11,7 @@ export const ExpertiseItem: FC<expertListInterface> = ({
   return (
     <li className={styles.expertise__item}>
       <img
+        loading="lazy"
         className={styles['expertise__item-image']}
         src={`${import.meta.env.BASE_URL}/images/expertise/${image_path}`}
       ></img>

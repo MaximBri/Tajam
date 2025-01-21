@@ -29,6 +29,9 @@
     color: $text-secondary;
     letter-spacing: 0.03em;
   }
+  &__button {
+    width: rem(119);
+  }
 }
 
 @media (max-width: 1024px) {

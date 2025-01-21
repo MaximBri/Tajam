@@ -15,7 +15,7 @@ export const Footer = () => {
       <div className={styles.footer__top}>
         <div className={styles.footer__col1}>
           <Link className={styles.footer__logo} to={routes.home}>
-            <img src={logo} alt="logo" />
+            <img loading="lazy" src={logo} alt="logo" />
           </Link>
           <p className={styles['footer__col1-text']}>
             lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis
@@ -26,14 +26,14 @@ export const Footer = () => {
         <div className={styles.footer__col2}>
           <h3 className={styles['footer__col2-title']}>Our studio</h3>
           <div className={styles['footer__col2-item']}>
-            <img src={sotSvg} alt="dot" />
+            <img loading="lazy" src={sotSvg} alt="dot" />
             <p>
               Ruko cucruk, Jl. Radio luar dalem jos No.12 - 13, Kalideres -
               Jakarta Barat 11480 - Indonesia
             </p>
           </div>
           <div className={styles['footer__col2-item']}>
-            <img src={telSvg} alt="tel" />
+            <img loading="lazy" src={telSvg} alt="tel" />
             <a href="tel:+622122243333">(+62) 21-2224 3333</a>
           </div>
         </div>
@@ -49,6 +49,7 @@ export const Footer = () => {
                   key={index}
                 >
                   <img
+                    loading="lazy"
                     src={`${import.meta.env.BASE_URL}/images/footer/${link.name}.svg`}
                     alt="social network"
                   ></img>

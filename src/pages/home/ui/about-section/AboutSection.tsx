@@ -3,8 +3,13 @@ import styles from './AboutSection.module.scss';
 
 export const AboutSection = () => {
   return (
-    <section id='about' className={styles.about}>
-      <img className={styles.about__image} src={decorSvg} alt="decoration" />
+    <section id="about" className={styles.about}>
+      <img
+        loading="lazy"
+        className={styles.about__image}
+        src={decorSvg}
+        alt="decoration"
+      />
       <div className={styles.about__texts}>
         <h2 className={styles.about__title}>Our Story</h2>
         <h3 className={styles.about__subtitle}>
@@ -19,7 +24,7 @@ export const AboutSection = () => {
           Class aptent taciti sociosqu ad litora torquent per conubia nostra,
           per inceptos himenaeos.
         </h3>
-        <button className="button">Learn more</button>
+        <button className={`button ${styles.about__button}`}>Learn more</button>
       </div>
     </section>
   );

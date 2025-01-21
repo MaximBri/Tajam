@@ -4,7 +4,7 @@ import styles from './TeamSection.module.scss';
 
 export const TeamSection = () => {
   return (
-    <section id='teams' className={styles.team}>
+    <section id="teams" className={styles.team}>
       <h2 className={styles.team__title}>MEET OUR AMAZING TEAM</h2>
       <h3 className={styles.team__subtitle}>
         Lorem ipsum dolor sit amet proin gravida nibh vel velit
@@ -25,7 +25,7 @@ export const TeamSection = () => {
       <h4 className={styles.team__other}>
         Become part of our dream team, let’s join us !
       </h4>
-      <button className="button">we are hiring</button>
+      <button className={`button ${styles.team__button}`}>we are hiring</button>
     </section>
   );
 };

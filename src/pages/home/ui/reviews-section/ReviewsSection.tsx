@@ -8,7 +8,7 @@ export const ReviewsSection = () => {
   const [activeReview, setActiveReview] = useState<number>(2);
   return (
     <section id="reviews" className={styles.reviews}>
-      <img className={styles.reviews__dot} src={dot} alt="dot" />
+      <img loading="lazy" className={styles.reviews__dot} src={dot} alt="dot" />
       <ul className={styles.reviews__list}>
         {reviewsList.map((elem, index) => {
           return (
@@ -29,6 +29,7 @@ export const ReviewsSection = () => {
         {reviewsList.map((elem, index) => {
           return (
             <img
+              loading="lazy"
               className={`${styles['reviews__photos-image']} ${activeReview === index ? styles['reviews__photos-image--active'] : ''}`}
               onClick={() => setActiveReview(index)}
               src={`${import.meta.env.BASE_URL}/images/reviews/${elem.image_path}`}
